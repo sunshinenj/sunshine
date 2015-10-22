@@ -1,0 +1,272 @@
+package com.mbg.acaa.login.client;
+
+import com.google.gwt.http.client.Request;
+import com.google.gwt.http.client.RequestCallback;
+import com.google.gwt.http.client.RequestException;
+import com.google.gwt.http.client.Response;
+import com.google.gwt.http.client.URL;
+import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.Composite;
+import com.google.gwt.user.client.ui.FlexTable;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.user.client.ui.Button;
+import com.google.gwt.user.client.ui.HasVerticalAlignment;
+import com.google.gwt.user.client.ui.HorizontalPanel;
+import com.google.gwt.user.client.ui.KeyboardListener;
+import com.google.gwt.user.client.ui.KeyboardListenerAdapter;
+import com.google.gwt.user.client.ui.Label;
+import com.google.gwt.user.client.ui.PasswordTextBox;
+import com.google.gwt.user.client.ui.ResetButton;
+import com.google.gwt.user.client.ui.TextBox;
+import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.user.client.ui.AbsolutePanel;
+import com.google.gwt.user.client.ui.HasHorizontalAlignment;
+import com.google.gwt.json.client.JSONObject;
+import com.google.gwt.json.client.JSONParser;
+import com.google.gwt.json.client.JSONValue;
+import com.google.gwt.event.dom.client.BlurEvent;
+import com.google.gwt.event.dom.client.BlurHandler;
+import com.google.gwt.event.dom.client.ClickHandler;
+import com.google.gwt.event.dom.client.ClickEvent;
+import com.google.gwt.event.dom.client.KeyUpHandler;
+import com.google.gwt.event.dom.client.KeyUpEvent;
+import com.mbg.acaa.common.acaaConstants;
+import com.mbg.acaa.common.acaaUrls;
+import com.mbg.acaa.ui.common.acaaRequestBuilder;
+import com.mbg.acaa.ui.common.UIUtil;
+/**
+ * @author acaa Web Team
+ */
+public class Login extends Composite {
+	/** Resource for message **/
+	private static final LoginResource RESOURCE = (LoginResource) GWT.create(LoginResource.class);
+	
+	private final AbsolutePanel absolutePanel = new AbsolutePanel();
+	HorizontalPanel horizontalPanel;
+	private TextBox visionName_box = null;
+	private PasswordTextBox visionPswd_box = null;
+	Label lblErrorMessage = new Label(RESOURCE.msg_LoginFail());
+	HorizontalPanel absolutePanel_7 = new HorizontalPanel();
+	Button btnOk = null;
+	public Login()	{
+		HorizontalPanel screenPanel = new HorizontalPanel();
+		initWidget(screenPanel);	
+		screenPanel.setStyleName("acaa_label");
+		screenPanel.setWidth("1024px");
+		screenPanel.setVerticalAlignment(HasVerticalAlignment.ALIGN_TOP);
+		screenPanel.add(absolutePanel);
+		screenPanel.setCellHorizontalAlignment(absolutePanel,HasHorizontalAlignment.ALIGN_CENTER);
+		absolutePanel.setStyleName("acaa_Panel");
+		visionName_box = new TextBox();
+		visionName_box.setTabIndex(1);
+		visionName_box.setName("vision-name");
+		//visionName_box.setText("MGR0A03A");
+		visionPswd_box = new PasswordTextBox();
+		visionPswd_box.setTabIndex(2);
+		visionPswd_box.setName("vision-pswd");
+		//visionPswd_box.setText("01VISION");
+		absolutePanel.setSize("391px", "404px");
+		
+		FlexTable flexTable = new FlexTable();
+		flexTable.setStyleName("gwt-mbg-mainPanel");
+		absolutePanel.add(flexTable, 0, 0);
+		flexTable.setSize("391px", "404px");
+		
+		visionName_box.getElement().setAttribute("autocorrect", "off");
+		visionName_box.getElement().setAttribute("autocapitalize", "off"); 
+		
+		visionName_box.setMaxLength(8);
+		visionName_box.addKeyUpHandler(new KeyUpHandler() {
+        	    public void onKeyUp(KeyUpEvent event) {
+        		String keyInput = visionName_box.getText();
+        		if (keyInput != null)
+        		    visionName_box.setText(String.valueOf(keyInput.trim()).toUpperCase());
+        	    }
+        	});
+        	visionName_box.addBlurHandler(new BlurHandler() {
+        	    public void onBlur(BlurEvent event) {
+        		String keyInput = visionName_box.getText();
+        		if (keyInput != null)
+        		    visionName_box.setText(String.valueOf(keyInput.trim()).toUpperCase());
+        	    }
+        	});	 
+		
+		AbsolutePanel absolutePanel_3 = new AbsolutePanel();
+		absolutePanel_3.setStyleName("acaa_Panel");
+		flexTable.setWidget(1, 0, absolutePanel_3);
+		absolutePanel_3.setSize("391px", "113px");
+		
+		AbsolutePanel absolutePanel_4 = new AbsolutePanel();
+		absolutePanel_4.setStyleName("gwt-mbg-pnlHeader");
+		absolutePanel_3.add(absolutePanel_4, 10, 10);
+		absolutePanel_4.setSize("364px", "22px");
+		
+		Label lblVision = new Label(RESOURCE.header_VISION());
+		lblVision.setStyleName("gwt-mbg-Page-Label");
+		absolutePanel_4.add(lblVision, 0, 0);
+		
+		Label label_2 = new Label(" ");
+		absolutePanel_3.add(label_2, 131, 42);
+		
+		Label visionName = new Label(RESOURCE.label_LoginName());
+		visionName.setStyleName("acaa_label");
+		absolutePanel_3.add(visionName, 10, 45);
+		
+		Label visionPassword = new Label(RESOURCE.label_Password());
+		visionPassword.setStyleName("acaa_label");
+		absolutePanel_3.add(visionPassword, 10, 82);
+		
+		absolutePanel_3.add(visionName_box, 109, 43);
+		absolutePanel_3.add(visionPswd_box, 109, 80);
+		
+		absolutePanel_7.setVisible(false);
+		flexTable.setWidget(2, 0, absolutePanel_7);
+		absolutePanel_7.setSize("100%", "30px");
+		absolutePanel_7.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+		absolutePanel_7.add(lblErrorMessage);
+		
+		AbsolutePanel absolutePanel_6 = new AbsolutePanel();
+		absolutePanel_6.setStyleName("gwt-mbg-pnlHeader");
+		flexTable.setWidget(3, 0, absolutePanel_6);
+		absolutePanel_6.setSize("391px", "30px");
+		
+		btnOk = new Button(RESOURCE.label_OK());
+		
+		btnOk.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				if(visionName_box.getText().length()>0 && visionPswd_box.getText().length()>0){
+					String userId=visionName_box.getText();
+					Character tempChar;
+					for (int i = 0; i < userId.length(); i++) {
+						tempChar =  (userId.charAt(i));
+						if (!String.valueOf(tempChar).matches("[A-Za-z0-9_-]")) {
+							UIUtil.showMessageBox(RESOURCE.vision_login_validation(),UIUtil.MSG_TYPE.INFO);
+							return;
+						} 
+					}	
+				  btnOk.setEnabled(false);
+				  authenticateVision(visionName_box.getText(),visionPswd_box.getText());
+				} else {
+				  lblErrorMessage.setText(RESOURCE.msg_validUserAndPswd());
+				  absolutePanel_7.setVisible(true);
+				}
+			}
+		});
+		btnOk.setStyleName("gwt-mbg-Page-Button");
+		absolutePanel_6.add(btnOk, 109, 0);
+		btnOk.setSize("60px", "25px");
+		ResetButton btnCancel = new ResetButton(RESOURCE.label_Cancel());
+		btnCancel.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent event) {
+				visionName_box.setValue("");
+				visionPswd_box.setValue("");
+				absolutePanel_7.setVisible(false);
+			}
+		});
+		btnCancel.setStyleName("gwt-mbg-Page-Button");
+		absolutePanel_6.add(btnCancel, 215, 0);
+		btnCancel.setSize("68px", "25px");
+		
+		AbsolutePanel absolutePanel_5 = new AbsolutePanel();
+		absolutePanel_5.setStyleName("acaa_Panel");
+		flexTable.setWidget(4, 0, absolutePanel_5);
+		absolutePanel_5.setSize("391px", "131px");
+		
+		FlexTable flexTable_1 = new FlexTable();
+		absolutePanel_5.add(flexTable_1, 12, 2);
+		flexTable_1.setSize("364px", "129px");
+		
+		Label lblVerizonWireless = new Label(RESOURCE.label_mbg());
+		lblVerizonWireless.setStyleName("acaa_terms_header");
+		lblVerizonWireless.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+		flexTable_1.setWidget(0, 0, lblVerizonWireless);
+		lblVerizonWireless.setHeight("14px");
+		
+		Label lbl_terms = new Label(RESOURCE.label_Login_Terms());
+		lbl_terms.setStyleName("acaa_terms_text");
+		lbl_terms.setDirectionEstimator(true);
+		lbl_terms.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
+		flexTable_1.setWidget(1, 0, lbl_terms);
+		lbl_terms.setHeight("80px");
+		
+	    SubmitListener sl = new SubmitListener();
+	    visionPswd_box.addKeyboardListener(sl);
+	    visionName_box.addKeyboardListener(sl);
+	}
+	
+	/**
+	 * On load.
+	 */
+	
+	public void onLoad() {
+		super.onLoad();
+		
+		// Focus on the vision name box first. 
+		visionName_box.setFocus(true);
+	}
+	
+	
+	private class SubmitListener extends KeyboardListenerAdapter {
+        public void onKeyPress(Widget sender, char key, int mods) {
+          if (KeyboardListener.KEY_ENTER == key)
+        	  btnOk.click();
+        }
+      }
+	public void authenticateVision(String visionUserId, String VisionPswd){
+		String reqURL = URL.encode(GWT.getHostPageBaseURL() + acaaUrls.VISION_LOGIN_ALL);
+		String upperCaseVisionUserId = visionUserId.toUpperCase();
+		StringBuffer postData = new StringBuffer();
+		postData.append(URL.encode("visionUserId")).append("=").append(URL.encode(upperCaseVisionUserId));
+		postData.append("&");
+		postData.append(URL.encode("VisionPswd")).append("=").append(URL.encode(VisionPswd));
+
+		acaaRequestBuilder builder = new acaaRequestBuilder(reqURL);	
+		builder.setHeader("Content-type", "application/x-www-form-urlencoded");
+		builder.setHeader("Cache-Control", "no-cache");
+		 try {
+		     builder.sendRequest(postData.toString(), new RequestCallback() {
+		      /**
+		       * CallBack method on Error...	  
+		       */
+		      public void onError(Request request, Throwable exception) {	
+		    	  btnOk.setEnabled(false);
+		    	  lblErrorMessage.setText(RESOURCE.msg_ServerDown());
+		      }
+		      /**
+		       * CallBack Method on Response... 
+		       */
+		      public void onResponseReceived(Request request, Response response) {
+		          if (com.mbg.acaa.common.acaaConstants.RESPONSE_STATUS_CODE == response.getStatusCode()) {		        	  
+		        	  JSONValue jsonValue = JSONParser.parseStrict(response.getText());
+		        	  	JSONObject jsonObj = jsonValue.isObject();	        	  	
+		        	  	JSONObject mainObj = (JSONObject)jsonObj.get("introatad").isObject();		        	  	
+		        	  	if(mainObj != null ){		        	  		
+		        	  		  try {		        	  			
+		        	  			 String success = UIUtil.jsonString(mainObj.get("SSGL"));		        	  			 
+					        	 if("AAM".equals(success)){
+					        		Window.Location.replace(GWT.getHostPageBaseURL()+acaaConstants.LOGIN_LANDING_PAGE_HTML);
+					        	 } else {	
+					        		
+					        		 btnOk.setEnabled(true);
+					        		 String errorMessage   = UIUtil.jsonString(mainObj.get("errorMessage"));
+					        		 lblErrorMessage.setText("");
+					        		 lblErrorMessage.setText(RESOURCE.msg_LoginFail()+":"+errorMessage);
+					        		 absolutePanel_7.remove(lblErrorMessage);
+					        		 absolutePanel_7.add(lblErrorMessage);
+					        		 absolutePanel_7.setVisible(true);
+					        	 }
+		        	  		  }catch (Exception exp) { btnOk.setEnabled(true); }
+			           } else { btnOk.setEnabled(true); } 
+		          } else {
+		        	 
+		        	 btnOk.setEnabled(true);
+		     		 lblErrorMessage.setText(RESOURCE.msg_ServerDown());
+		          }
+		        }
+		      });
+		    } catch (RequestException e) {
+		      
+		      btnOk.setEnabled(true);
+		    }
+	  }	
+}
