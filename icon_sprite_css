@@ -1,0 +1,459 @@
+
+
+
+/* SmartSprites directions: vert-repeat for repeat-x, hori-repeat for repeat-y */
+
+.acaawebFooter { 
+    margin:0px auto 0px auto;
+    text-align: left;
+  background-image: url('img/sprite-vert-repeat.png');
+  background-position: left -0px;
+    background-repeat: repeat-x;
+    height: 29px;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+}
+/* from core.css */
+.mainHeader {
+  background-image: url('img/sprite-vert-repeat.png');
+  background-position: left -29px;
+    background-repeat:repeat-x;
+    height:88px; 
+    width: 100%;
+}
+.VLogo {
+  background-image: url('img/sprite-main.png');
+  background-position: left -0px;
+    width: 124px;
+    height: 75px;
+    margin: -2px 0 0 7px; 
+    float: left;    
+}
+.ArrowOpen {
+  background-image: url('img/sprite-main.png');
+  background-position: left -75px;
+    float: left;
+    height: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+    vertical-align: bottom;
+    width: 15px;
+    *margin-top: 0px;
+}
+.ArrowClose {
+  background-image: url('img/sprite-main.png');
+  background-position: left -90px;
+    float: left;
+    height: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+    vertical-align: bottom;
+    width: 15px;
+    *margin-top: 0px;
+}
+.IconClose {
+  background-image: url('img/sprite-main.png');
+  background-position: left -105px;
+    float: left;
+    height: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+    vertical-align: bottom;
+    width: 15px;
+    *margin-top: 0px;
+}
+.IconCheck {
+  background-image: url('img/sprite-main.png');
+  background-position: left -120px;
+    float: left;
+    height: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+    vertical-align: bottom;
+    width: 15px;
+    *margin-top: 0px;
+}
+.backgroundGradient {
+  background-image: url('img/sprite-vert-repeat.png');
+  background-position: left -117px;
+    background-repeat:repeat-x;
+    background-color:#90918e;   
+}
+/* from extjs-acaa.css */
+.Icon_InfoManager_Green {
+    background-position: 0 0;
+    background-color: transparent !important;
+  background-image: url('img/sprite-main.png') !important;
+  background-position: left -135px !important;
+    background-repeat: no-repeat;
+    width:25px !important; 
+    height:25px !important; 
+    border-width: 0px!important; 
+    border-style:none; 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00cc0000', endColorstr='#007f0000',GradientType=0 ) !important; /* IE6-9 */
+}
+.Icon_CloseCall {
+    background-position: 0 0;
+    background-color: transparent !important;
+  background-image: url('img/sprite-main.png') !important;
+  background-position: left -160px !important;
+    background-repeat: no-repeat;
+    width:25px !important; 
+    height:33px !important; 
+    border-width: 0px!important; 
+    border-style:none; 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00cc0000', endColorstr='#007f0000',GradientType=0 ) !important; /* IE6-9 */
+}
+.Icon_Refresh {
+    background-color: transparent !important;
+    background-position: 0 0;
+  background-image: url('img/sprite-main.png') !important;
+  background-position: left -193px !important;
+    background-repeat: no-repeat;
+    width:25px !important; 
+    height:25px !important; 
+    border-width: 0px!important; 
+    border-style:none; 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00cc0000', endColorstr='#007f0000',GradientType=0 ) !important; /* IE6-9 */
+}
+.searchglass {
+  background-image: url('img/sprite-main.png');
+  background-position: left -220px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.searchglass:hover {
+  background-image: url('img/sprite-main.png');
+  background-position: left -236px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.searchTool {
+  background-image: url('img/sprite-main.png');
+  background-position: left -252px;
+    cursor: pointer;
+    width: 31px !important;
+    height: 22px !important;
+    border: 0px solid #ed1c24 !important;
+}
+.searchTool:hover {
+  background-image: url('img/sprite-main.png');
+  background-position: left -274px;
+    cursor: pointer;
+    border: none !important;
+}
+
+/* gallaad mainHeaderToolbar icons */
+.Icon_NewCustomer_web_White {
+  background-image: url('img/sprite-main.png');
+  background-position: left -316px;
+    width: 30px;
+    height: 44px;
+}
+.Icon_NewCustomer_web_Gray{
+  background-image: url('img/sprite-main.png');
+  background-position: left -360px;
+    width: 30px;
+    height: 44px;
+}
+.Icon_NewCall_web_White {
+  background-image: url('img/sprite-main.png');
+  background-position: left -404px;
+    width: 30px;
+    height: 44px;
+}
+.Icon_WFM {
+  background-image: url('img/sprite-main.png');
+  background-position: left -448px;
+    width: 44px;
+    height: 44px;
+}
+.Icon_CallHistory_White {
+  background-image: url('img/sprite-main.png');
+  background-position: left -492px;
+    width: 30px;
+    height: 44px;
+}
+.Icon_UserLogOut_White {
+  background-image: url('img/sprite-main.png');
+  background-position: left -536px;
+    width: 30px;
+    height: 44px;
+}
+.IconAddNew_hover2. {
+  background-image: url('img/sprite-main.png');
+  background-position: left -580px;
+    width: 41px;
+    height: 38px;
+}
+.IconAdvancedSearch_hover2 {
+  background-image: url('img/sprite-main.png');
+  background-position: left -618px;
+    width: 41px;
+    height: 38px;
+}
+.Icon_Arrow_CTI {
+  background-image: url('img/sprite-main.png');
+  background-position: left -656px;
+    width: 15px;
+    height: 15px;
+}
+.Icon_CTI {
+  background-image: url('img/sprite-main.png');
+  background-position: left -671px;
+    width: 35px;
+    height: 30px;
+}
+.Icon_CTI_Green {
+  background-image: url('img/sprite-main.png');
+  background-position: left -701px;
+    width: 35px;
+    height: 30px;
+}
+.Icon_CTI_Red {
+  background-image: url('img/sprite-main.png');
+  background-position: left -731px;
+    width: 35px;
+    height: 30px;
+}
+
+.Icon_CTI_Yellow {
+  background-image: url('img/sprite-main.png');
+  background-position: left -791px;
+    width: 35px;
+    height: 30px;
+}
+.VZW_New_Logo_Brand1 {
+  background-image: url('img/sprite-main.png');
+  background-position: left -0px;
+    width: 124px;
+    height: 75px;
+}
+.Icon_Close_All_White {
+  background-image: url('img/sprite-main.png');
+  background-position: left -821px;
+    width: 44px;
+    height: 44px;
+}
+.IconClose {
+  background-image: url('img/sprite-main.png');
+  background-position: left -105px;
+    width: 15px;
+    height: 15px;
+}
+.Icon_Bell_White {
+  background-image: url('img/sprite-main.png');
+  background-position: left -865px;
+    width: 30px;
+    height: 30px;
+}
+.Icon_Manual_Refresh {
+  background-image: url('img/sprite-main.png');
+  background-position: left -895px;
+    width: 30px;
+    height: 44px;
+}
+.Icon_Manual_Refresh_DialMeterGreen {
+  background-image: url('img/sprite-main.png');
+  background-position: left -939px;
+    width: 45px;
+    height: 44px;
+}
+.Icon_Manual_Refresh_DialMeterRed {
+  background-image: url('img/sprite-main.png');
+  background-position: left -983px;
+    width: 45px;
+    height: 44px;
+}
+/* CTI Icons */
+.Icon_CTI_Alternate {
+  background-image: url('img/sprite-cti.png');
+  background-position: left -0px;
+    width:40px;
+    height:40px;
+}
+.Icon_CTI_Alternate_hover {
+  background-image: url('img/sprite-cti.png');
+  background-position: left -40px;
+    width:40px;
+    height:40px;
+}
+.Icon_CTI_Conference {
+  background-image: url('img/sprite-cti.png');
+  background-position: left -80px;
+    width:40px;
+    height:40px;
+}
+.Icon_CTI_Conference_hover {
+  background-image: url('img/sprite-cti.png');
+  background-position: left -120px;
+    width:40px;
+    height:40px;
+}
+.Icon_CTI_Dial {
+  background-image: url('img/sprite-cti.png');
+  background-position: left -160px;
+    width:40px;
+    height:40px;
+}
+.Icon_CTI_Dial_hover {
+  background-image: url('img/sprite-cti.png');
+  background-position: left -200px;
+    width:40px;
+    height:40px;
+}
+.Icon_CTI_Hold {
+  background-image: url('img/sprite-cti.png');
+  background-position: left -240px;
+    width:40px;
+    height:40px;
+}
+.Icon_CTI_Hold_hover {
+  background-image: url('img/sprite-cti.png');
+  background-position: left -280px;
+    width:40px;
+    height:40px;
+}
+.Icon_CTI_Release {
+  background-image: url('img/sprite-cti.png');
+  background-position: left -320px;
+    width:40px;
+    height:40px;
+}
+.Icon_CTI_Release_hover {
+  background-image: url('img/sprite-cti.png');
+  background-position: left -360px;
+    width:40px;
+    height:40px;
+}
+.Icon_CTI_Retrieve {
+  background-image: url('img/sprite-cti.png');
+  background-position: left -400px;
+    width:40px;
+    height:40px;
+}
+.Icon_CTI_Retrieve_hover {
+  background-image: url('img/sprite-cti.png');
+  background-position: left -440px;
+    width:40px;
+    height:40px;
+}
+.Icon_CTI_Transfer {
+  background-image: url('img/sprite-cti.png');
+  background-position: left -480px;
+    width:40px;
+    height:40px;
+}
+.Icon_CTI_Transfer_hover {
+  background-image: url('img/sprite-cti.png');
+  background-position: left -520px;
+    width:40px;
+    height:40px;
+}
+/* gallaad customerHeader Icons */
+.Icon_Refresh_25_27 {
+  background-image: url('img/sprite-main.png');
+  background-position: left -193px;
+    width: 25px;
+    height: 27px;
+}
+.Icon_divider_70px {
+  background-image: url('img/sprite-main.png');
+  background-position: left -1027px;
+    width:10px;
+    height:70px;
+}
+.Icon_Plus {
+  background-image: url('img/sprite-main.png');
+  background-position: left -1097px;
+    width: 15px;
+    height: 15px;
+}
+.Icon_Expand_Collapse_Down {
+  background-image: url('img/sprite-main.png');
+  background-position: left -1112px;
+    width:20px;
+    height:20px;   
+}
+.Icon_RMUpdation {
+  background-image: url('img/sprite-main.png');
+  background-position: left -1132px;
+    width:25px;
+    height:23px;  
+}
+.Icon_ActionNeeded {
+  background-image: url('img/sprite-main.png');
+  background-position: left -1155px;
+    width:20px;
+    height:17px;     
+}
+
+.Icon_Disability {
+  background-image: url('img/sprite-main.png');
+  background-position: left -1172px;
+    width:20px;
+    height:20px;
+}
+/* .Icon_SH1 {
+    background-image: url(../images/SH1.png); * sprite-ref: main;
+    width:36px;
+    height:29px;    
+}
+.Icon_CA {
+    background-image: url(../images/CA.PNG); * sprite-ref: main;
+    width:36px;
+    height:29px;   
+}
+.Icon_Centennial {
+    background-image: url(../images/Centennial.PNG); * sprite-ref: main;
+    width:37px;
+    height:29px;  
+}
+.Icon_Alltel {
+    background-image: url(../images/Alltel.png); * sprite-ref: main;
+    width:37px;
+    height:29px;  
+}
+.Icon_RCC {
+    background-image: url(../images/RCC.png); * sprite-ref: main;
+    width:37px;
+    height:29px;  
+}
+.Icon_cellularOne {
+    background-image: url(../images/cellularOne.png); * sprite-ref: main;
+    width:43px;
+    height:28px;  
+}
+.Icon_Plateau {
+    background-image: url(../images/Plateau.png); * sprite-ref: main;
+    width:41px;
+    height:33px;  
+}
+.Icon_AZ1 {
+    background-image: url(../images/AZ1.png); * sprite-ref: main;
+    width:49px;
+    height:38px;  
+}
+.Icon_MO-13 {
+    background-image: url(../images/MO-13.png); * sprite-ref: main;
+    width:35px;
+    height:35px;  
+}
+.Icon_Cantenna {
+    background-image: url(../images/Cantenna.png); * sprite-ref: main;
+    width:35px;
+    height:35px;  
+}
+.Icon_GuruTMP {
+    background-image: url(../images/GuruTMP.png); * sprite-ref: main;
+    width:36px;
+    height:36px;  
+}
+.Icon_4G {
+    background-image: url(../images/4G_Icon.png); * sprite-ref: main;
+    width:36px;
+    height:36px;  
+    } */
