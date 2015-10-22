@@ -1,0 +1,335 @@
+Ext.define("ACCWebApp.controller.ACCWebController", {
+		extend : 'Ext.app.Controller',
+		views: [
+		        'ACCSettingContainer', 'ACCSettingGridView','ACCSettingAddView'
+		        ],
+		refs : [
+		        
+		        ],
+	init : function() {
+		var me = this;
+		var forwardedData = {newpopup : "true"};
+	
+	this.control({
+//		'[itemId=ACCSettingUserContainer]': {
+//			 afterrender : function(accSettingUserForm) {
+//				 ACSSFM.callServicePost("WebAccessManageService", 
+//                         {"ACTION": "T"},
+//                         function(objverdata)
+//                         {
+//                        	 //alert("jane is here");
+//                         });
+//				 
+//			 }
+//			},
+			//'[itemId=accSettingUserView]': {
+//			'[itemId=ACCSettingUserContainerId]': {
+//				 afterrender : function(accSettingUserForm) {
+//					 ACSSFM.callServicePost("WebAccessManageService", 
+//	                         {"ACTION": "T"},
+//	                         function(data)
+//	                         {
+//	                        	// alert("xxxxjane is here");
+//	                        	 var objverlist = [];
+//	                        	 var webAccDet = data.serResp.OUTPUT.webAccessDetails;
+//
+//                                 var mystore = accSettingUserForm.down('[itemId=objVerName]').getStore();
+//                                                
+//                                 for(var i = 0; i < webAccDet.length; i++) {
+//                                	 objverlist.push({
+//                                	     objectVersion: webAccDet[i].objectVersion
+//                                	     
+//                                	   });
+//                                	}
+//                                	// false causes the data to be not appended
+//                                 mystore.loadData(objverlist);                        
+//	                        	 
+//	                        	 
+//	                         });
+//					 
+//				 }
+//				},
+				'[itemId=ACCSettingContainerId]': {
+					 afterrender : function(accSettingUserForm) {
+						 ACSSFM.callServicePost("WebAccessManageService", 
+		                         {"ACTION": "T"},
+		                         function(data)
+		                         {
+		                        	 
+		                        	 var objverlist_ACCSettingContainerId = [];
+		                        	
+		                        	 var webAccDet_ACCSettingContainerId = data.serResp.OUTPUT.webAccessDetails;
+	                                 
+	                                 var mystore = accSettingUserForm.down('[itemId=objVerWebName]').getStore();
+	                                                             
+	                                 for(var i = 0; i < webAccDet_ACCSettingContainerId.length; i++) {
+	                                	 objverlist_ACCSettingContainerId.push({
+	                                	     objectVersion: webAccDet_ACCSettingContainerId[i].objectVersion
+	                                	     
+	                                	   });
+	                                	}
+	                                
+	                                 mystore.loadData(objverlist_ACCSettingContainerId); 
+	                                		                        	 
+		                         });
+						 
+					 }
+					},
+				
+					
+				//'[itemId=objVerWebName]':{
+					'widget.ACCSettingContainer [itemId=objVerWebName]' :{
+					
+					'select': function(combo)
+					{
+						//var grid = accSettingUserForm.down('[itemId=batchReportGrid2]');
+						var getValue = combo.getValue();
+						ACSSFM.callServicePost("WebAccessManageService", 
+		                         {"ACTION": "S", "objectVersion": getValue },
+		                         function(data)
+		                         {	   
+		                        	 
+		                        	 var objlist_objVerWebName = [];
+		                        	 var webAccDet_objVerWebName = data.serResp.OUTPUT.webAccessDetails;
+	                                 var mystore_objVerWebName = combo.up('[itemId=ACCSettingContainerId]').down('[itemId=accSettingGridView]').getStore();
+	                                 
+	                                 
+	                                 for(var i = 0; i < webAccDet_objVerWebName.length; i++) {
+	                                	 objlist_objVerWebName.push({
+	                                		 
+	                                		 objectName: webAccDet_objVerWebName[i].objectName,
+	                                		 objectVersion: webAccDet_objVerWebName[i].objectVersion,
+	                                		 property: webAccDet_objVerWebName[i].property,
+	                                		 propertyValue: webAccDet_objVerWebName[i].propertyValue  	     
+	                                	   });
+	                                	}
+
+	                                 mystore_objVerWebName.loadData(objlist_objVerWebName); 
+		                         });	                         
+					}
+					},	
+//		'[itemId=objVerName]':{
+//				'select': function(combo)
+//				{
+//					//var grid = accSettingUserForm.down('[itemId=batchReportGrid2]');
+//					var getValue = combo.getValue();
+//					ACSSFM.callServicePost("WebAccessSettingManageService", 
+//	                         {"ACTION": "S", "objectVersion": getValue },
+//	                         function(data)
+//	                         {	                       
+//	                        	 var objlist = [];
+//	                        	 var webAccDetAll = data.serResp.OUTPUT.webAccessDetails;
+//                                 var mystoreall = combo.up('[itemId=ACCSettingUserContainerId]').down('[itemId=accSettingUserView]').getStore();
+//                                 
+//                                 
+//                                 for(var i = 0; i < webAccDetAll.length; i++) {
+//                                	 objlist.push({
+//                                		 
+//                                		 production: webAccDetAll[i].production,
+//                                		 serviceRegion: webAccDetAll[i].serviceRegion,
+//                                		 department: webAccDetAll[i].department,
+//                                		 userid: webAccDetAll[i].userid,
+//                                		 objectVersion: webAccDetAll[i].objectVersion,
+//                                		 isActive: webAccDetAll[i].isActive             	     
+//                                	   });
+//                                	}
+//
+//                                 mystoreall.loadData(objlist); 
+//	                         });	                         
+//				}
+//				},	
+			
+		'[itemId=btn_addSetting]': {
+            click: function(button) {
+            	//alert("here c0cheji!");
+            	
+            	
+            	// GET <<accesssettingmaincontainer>>
+            	var v_btn_addSetting = Ext.getCmp('accesswebMaincontainerId');
+            	v_btn_addSetting.removeAll();
+            	            	
+            	var myView_btn_addSetting = Ext.create('ACCWebApp.view.ACCSettingAddView', {});
+            	//myView.renderto(v);
+            	v_btn_addSetting.add(myView_btn_addSetting);
+            	v_btn_addSetting.doLayout();
+            	
+//            	 ACSSFM.callServicePost("WebAccessManageService", 
+//                         {"ACTION": "T"},
+//                         function(data)
+//                         {
+//                        	 
+//                        	 var objverlist_addSetting = [];
+//                        	
+//                        	 var webAccDet_addSetting = data.serResp.OUTPUT.webAccessDetails;
+//                             
+//                             var mystore_addSetting = myView_btn_addSetting.down('[itemId=objVerWebAddName]').getStore();
+//                                                         
+//                             for(var i = 0; i < webAccDet_addSetting.length; i++) {
+//                            	 objverlist_addSetting.push({
+//                            	     objectVersion: webAccDet_addSetting[i].objectVersion
+//                            	     
+//                            	   });
+//                            	}
+//                            
+//                             mystore_addSetting.loadData(objverlist_addSetting); 
+//                            		                        	 
+//                         });	
+               }
+			},
+		'[itemId=btn_addSettingCancel]': {
+				click: function(button){
+					var v_addSettingCancel = Ext.getCmp('accesswebMaincontainerId');
+		        	v_addSettingCancel.removeAll();
+		        	            	
+		        	var myView_addSettingCancel = Ext.create('ACCWebApp.view.ACCSettingContainer', {});
+		        	//myView.renderto(v);
+		        	v_addSettingCancel.add(myView_addSettingCancel);
+		        	v_addSettingCancel.doLayout();
+				}
+		},	
+			
+		'[itemId=btn_addSettingDb]': {
+	            click: function(button) {
+	            	//alert("here c0cheji db!");            	
+	            	//var objName_addSettingDbPanel=button.up('[itemId=accSettingAddView]').down('[itemId=insertObjectNameTextField]').getValue();
+	            	
+	            	var objVer_addSettingDbPanel=button.up('[itemId=accSettingAddView]').down('[itemId=insertObjectVersionTextField]').getValue();
+	            	var property_addSettingDbPanel=button.up('[itemId=accSettingAddView]').down('[itemId=insertPropertyTextField]').getValue();
+	            	var proValue_addSettingDbPanel=button.up('[itemId=accSettingAddView]').down('[itemId=insertPropertyValueTextField]').getValue();
+	            	
+	            	if (objVer_addSettingDbPanel.length == 0){
+	            		alert("Please type correct Pilot Profile!");
+	            		return;
+	            	}
+	            	if (property_addSettingDbPanel.length == 0){
+	            		alert("Please type correct Property Name!");
+	            		return;
+	            	}
+	            	if (proValue_addSettingDbPanel.length == 0){
+	            		alert("Please type correct Property Value!");
+	            		return;
+	            	}
+	            	
+	            	ACSSFM.callServicePost("WebAccessManageService", 
+	                         {"ACTION": "I", 
+	            			"objectName": "ACSS_WEB", 
+	            			"objectVersion": objVer_addSettingDbPanel,
+	                         "property": property_addSettingDbPanel, 
+	                         "propertyValue": proValue_addSettingDbPanel },
+	                         function(objverdata)
+	                         {
+	                        	 if (((objverdata.serResp.OUTPUT != null))&&(objverdata.serResp.OUTPUT.serviceHeader.errorList != null)){
+		                        		var errMess = objverdata.serResp.OUTPUT.serviceHeader.errorMessage;
+		                        		alert(errMess);
+		                        		return;
+		                        	}
+	                         		var v_btn_addSettingDb = Ext.getCmp('accesswebMaincontainerId');
+		                         	v_btn_addSettingDb.removeAll();
+		                         	            	
+		                         	var myView_btn_addSettingDb = Ext.create('ACCWebApp.view.ACCSettingContainer', {});
+		                         	//myView.renderto(v);
+		                         	v_btn_addSettingDb.add(myView_btn_addSettingDb);
+		                         	v_btn_addSettingDb.doLayout();
+	                         });
+	            	
+	               }
+			}
+//		'[itemId=btn_addSettingUser]': {
+//	            click: function(button) {
+//	            	//alert("here c0cheji!");
+//	            	
+//	            	
+//	            	// GET <<accesssettingmaincontainer>>
+//	            	var v = Ext.getCmp('accesssettingMaincontainerId');
+//	            	v.removeAll();
+//	            	            	
+//	            	var myView = Ext.create('ACCSettingApp.view.ACCSettingAddUserView', {});
+//	            	//myView.renderto(v);
+//	            	v.add(myView);
+//	            	v.doLayout();
+//	            	
+//	        		 ACSSFM.callServicePost("WebAccessManageService", 
+//		                         {"ACTION": "T"},
+//		                         function(data)
+//		                         {
+//		                        	 
+//		                        	 var objverlist_addSettingUser = [];
+//		                        	
+//		                        	 var webAccDet_addSettingUser = data.serResp.OUTPUT.webAccessDetails;
+//	                                 
+//	                                 var mystore = myView.down('[itemId=objVerWebUserName]').getStore();
+//	                                                             
+//	                                 for(var i = 0; i < webAccDet_addSettingUser.length; i++) {
+//	                                	 objverlist_addSettingUser.push({
+//	                                	     objectVersion: webAccDet_addSettingUser[i].objectVersion
+//	                                	     
+//	                                	   });
+//	                                	}
+//	                                
+//	                                 mystore.loadData(objverlist_addSettingUser); 
+//	                                		                        	 
+//		                         });						
+//	            	
+//	               }
+//				},
+
+//		'[itemId=btn_addSettingUserDb]': {
+//		            click: function(button) {
+//		            	
+//		            	var production_addSettingUserDb=button.up('[itemId=accSettingAddUserView]').down('[itemId=insertProductionField]').getValue();	
+//		            	var serviceRegion_addSettingUserDb=button.up('[itemId=accSettingAddUserView]').down('[itemId=insertServiceRegionTextField]').getValue();
+//		            	var department_addSettingUserDb=button.up('[itemId=accSettingAddUserView]').down('[itemId=insertDeptIDTextField]').getValue();
+//		            	var userid_addSettingDbPanel=button.up('[itemId=accSettingAddUserView]').down('[itemId=insertNTUserIDValueTextField]').getValue();
+//		            	var objectVersion_addSettingDbPanel=button.up('[itemId=accSettingAddUserView]').down('[itemId=objVerWebUserName]').getValue();
+//		            	var isActive_addSettingDbPanel=button.up('[itemId=accSettingAddUserView]').down('[itemId=insertIsActiveField]').getChecked()[0].getGroupValue();
+//		            	   
+//		            	ACSSFM.callServicePost("WebAccessSettingManageService", 
+//		                         {"ACTION": "I", "production": production_addSettingUserDb, 
+//		            			"serviceRegion": serviceRegion_addSettingUserDb,
+//		                         "deptId": department_addSettingUserDb, 
+//		                         "ntUserId": userid_addSettingDbPanel,
+//		                         "objectVersion": objectVersion_addSettingDbPanel,
+//		                         "isActive": isActive_addSettingDbPanel,
+//		                         "newproduction": "",
+//		                         "newserviceRegion": "",
+//		                         "newdeptId": "",
+//		                         "newntUserId": "",
+//		                         "newobjectVersion": "",
+//		                         "newisActive": ""
+//		                         },
+//		                         
+//		                         function(objverdata)
+//		                         {
+//		                        	// button.up('[itemId=accSettingAddUserView]').removeAll();
+//		                        	var v_new = Ext.getCmp('accesssettingMaincontainerId');
+//		                         	v_new.removeAll();
+//		                         	            	
+//		                         	var myView_new = Ext.create('ACCSettingApp.view.ACCSettingUserContainer', {});
+//		                         	//myView.renderto(v);
+//		                         	v_new.add(myView_new);
+//		                         	v_new.doLayout();
+//		                         });
+//		            	
+//		               
+//		            }
+//				},	
+//	'[itemId=btn_viewSetting]': {
+//        click: function(button) {
+//	
+//        	// GET <<accesssettingmaincontainer>>
+//        	var v = Ext.getCmp('accesswebMaincontainerId');
+//        	v.removeAll();
+//        	            	
+//        	var myView = Ext.create('ACCSettingApp.view.ACCSettingContainer', {});
+//        	//myView.renderto(v);
+//        	v.add(myView);
+//        	v.doLayout();
+//           }
+//		},
+
+	});
+	
+	
+	} 
+	
+});
