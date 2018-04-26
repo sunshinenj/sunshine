@@ -1,0 +1,15 @@
+<html>
+<body>
+<h2>Generate Report</h2>
+
+<form action="ReportServlet" method=get>
+
+<input type=textbox name="rallyCsvPath" value=" path for Rally Csv file">
+<input type=textbox name="jenkinsJsonPathStage" value=" path for Jenkins stage Json file">
+<input type=textbox name="jenkinsJsonPathTesta" value=" path for Jenkins testa Json file">
+<input type=textbox name="jenkinsJsonPathLocal" value=" path for Jenkins local Json file">
+<input type=submit >
+</form>
+
+</body>
+</html>
