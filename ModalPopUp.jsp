@@ -1,6 +1,6 @@
 <%@include file="/libs/foundation/global.jsp"%>
 <%@page session="false"%>
-<body class="theme-uhc-mir">
+<body class="theme-uh-mir">
     <main role="main" id="site-wrapper">
         <div class="modal-overlay show" style="overflow: scroll;">
             <div id="ole-cancel-confirm" class="popup-modal active">
