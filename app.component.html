@@ -1,0 +1,42 @@
+<div class="content-section">
+  <div class="container">
+    <div class="row has-aside">
+
+
+<div class="col-md-9">
+  <!-- <app-welcome-ole></app-welcome-ole>
+    <app-medicare-insurance-inf></app-medicare-insurance-inf>
+       <app-ole-primary-care-provider></app-ole-primary-care-provider>
+    <app-ole-review></app-ole-review>
+    <app-ole-submit-confirmation></app-ole-submit-confirmation>-->
+
+
+ <!--<a class="olelinks" routerLink="/medicare-information" routerLinkActive="active">Medicare Insurance Information</a><br>
+    <a class="olelinks" routerLink="/welcome" routerLinkActive="active">welcome</a><br>
+    <a class="olelinks" routerLink="/confirmation" routerLinkActive="active">Confirmation</a><br>
+    <a class="olelinks" routerLink="/review" routerLinkActive="active">Review</a><br>
+    <a class="olelinks" routerLink="/provider" routerLinkActive="active">Provider Search</a><br>
+    <a class="olelinks" routerLink="/OlePersonalinfo" routerLinkActive="active">Ole Personal info</a><br>-->
+    <app-svg-component></app-svg-component>
+    <router-outlet (activate)="onActivate()"></router-outlet>
+   <!-- <div>
+      <h2>Job Application for Heroes</h2>
+      <div *ngIf="questions">
+        <app-dynamic-form [questions]="questions"></app-dynamic-form>
+      </div>
+    </div>-->
+
+
+</div>
+
+<div class="col-md-3">
+ 
+  <app-rightrail></app-rightrail>
+</div>
+
+</div>
+</div>
+</div>
+<div class="component-code-container container" aria-hidden="true">
+  {{oleCmsCodeData}}
+</div> 
