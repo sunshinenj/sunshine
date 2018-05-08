@@ -43,7 +43,7 @@
               </div>
         </div>
         <div class="modal-footer">
-            <a href="https://www.aarp.org/" class="cta-button close-modal secondary" id="proceed" style="background-color:${properties.proceedBtnColor};">${properties.proceedBtn}</a>
+            <a href="https://www.aar.edu/" class="cta-button close-modal secondary" id="proceed" style="background-color:${properties.proceedBtnColor};">${properties.proceedBtn}</a>
           <a class="cta-button cta-button" (click)="back()"style="background-color:${properties.cancelButtonColor};">${properties.cancelButton}</a>
         </div>
       </div>
