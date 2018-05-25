@@ -1,0 +1,75 @@
+
+<div id="ole-common-form" class="ole-common-form view--submitted">
+  <div class="ole-form-header">
+
+    <h2 class="only-thank-you">{{submissionConfirmationComponentdata.mainHeading}}</h2>
+  </div> 
+
+  <div class="ole-form-container">
+
+    <div id="ole-form-submitted" class="form-submitted">
+      <div class="form-submitted-content">
+        <div class="segment">
+          <p [innerHTML]="submissionConfirmationComponentdata.successfullysubmittedtxt"></p>
+          <h3>2016 AARP MedicareComplete SecureHorizons Essential (HMO)</h3>
+
+          <ul>
+            <li><span [innerHTML]="submissionConfirmationComponentdata.todaydatetxt"></span>XX/XX/XXXX</li>
+            <li><span [innerHTML]="submissionConfirmationComponentdata.Ziptxt"></span>90210 (Los Angeles County)</li>
+            <li><span [innerHTML]="submissionConfirmationComponentdata.Premiumtxt"></span>$0.00 a month</li>
+            <li><span [innerHTML]="submissionConfirmationComponentdata.ProposedEffectiveDatetxt"></span>04/15/2016</li>
+          </ul>
+
+          <div class="confirmation-number-container">
+            <span class="confirmation-number-headline">{{submissionConfirmationComponentdata.confirmationnumbertxt}}</span>
+            <p class="confirmation-number">XXXXXXXXXXXX</p>
+          </div>
+
+          <div class="summary-options hide-for-print">
+            <p class="print-copy">
+              <a href="javascript:void(0);" target="_blank" tabindex="0"  (click)="print()" id="print-summary">
+                <svg aria-hidden="true" role="presentation">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-print"></use>
+              </svg>
+              {{submissionConfirmationComponentdata.Printsummarytxt}}</a>
+            </p>
+            <p class="separator no-mobile"></p>
+            <p class="print-copy">
+              <a href="#" target="_blank" tabindex="0"><svg aria-hidden="true" role="presentation">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-email"></use>
+              </svg>
+                {{submissionConfirmationComponentdata.Emailsummarytxt}}</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="segment hide-for-print">
+          <div class="go-green-headline">
+            <img src="assets/images/go-green.png" class="icon-image" alt="">
+            <h3 class="sub-header">{{submissionConfirmationComponentdata.gopaperlesstxt}}</h3>
+          </div>
+
+          <span innerHTML="submissionConfirmationComponentdata.confirmemailtxt"></span>
+          <span class="field go-green-field">
+                                                <input type="text" name="go-green-email" id="go-green-email" value="prepopulated@email.com">
+                                                <button class="cta-button secondary" tabindex="0">{{submissionConfirmationComponentdata.Signuptxt}}</button>
+                                            </span>
+
+         <span [innerHTML]="submissionConfirmationComponentdata.noteContent"></span>
+
+        </div>
+
+        <div class="segment hide-for-print">
+          <h3 class="sub-header">{{submissionConfirmationComponentdata.Nextstepstxt}}</h3>
+          <p [innerHTML]="submissionConfirmationComponentdata.Nextstepspara"></p>
+          <div class="cta-button-group">
+            <a href="#" class="cta-button secondary" >{{submissionConfirmationComponentdata.pcptext}}</a>
+            <a href="#" class="cta-button secondary" [innerHTML]="submissionConfirmationComponentdata.Msptext">  </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
