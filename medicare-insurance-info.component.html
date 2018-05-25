@@ -1,0 +1,25 @@
+<fieldset class="fieldset-required">
+  <legend [innerHTML]="medicareInsurnceComponentdata.medicInsnceInfoHeadinglegend"></legend>
+
+  <div [innerHTML]="medicareInsurnceComponentdata.medicInsnceInfoparaText"></div>
+
+  <form  #f="ngForm">
+  <div class="card-wrapper">
+    <span id="card-typeA" class="field no-review-display">
+      <input type="radio" name="cardType" [(ngModel)]="medicareInsurnceComponentdata.cardType" value="before-2016" id="card-type-before" ngModel required (click)="before2016()">
+      <label class="card-choice" for="card-type-before">
+        <img src={{medicareInsurnceComponentdata.imageASrc}} alt="medicare health insurance image_one">
+        <p>{{medicareInsurnceComponentdata.imageAText}}</p>
+      </label>
+    </span>
+    <span  id="card-typeB" class="field no-review-display">
+        <input type="radio" name="cardType" [(ngModel)]="medicareInsurnceComponentdata.cardType"  value="after-2016" id="card-type-after" ngModel required  (click)="after2016()">
+        <label class="card-choice" for="card-type-after">
+            <img src={{medicareInsurnceComponentdata.imageBSrc}} alt="medicare health insurance image_two">
+            <p>{{medicareInsurnceComponentdata.imageBText}}</p>
+        </label>
+    </span>
+  </div>
+</form>  
+  <span for="card-type" class="field-error-msg" data-id="card-type-error">Please select a Medicare card that most closely matches yours.</span>
+</fieldset>
