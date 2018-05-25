@@ -1,0 +1,76 @@
+
+ <a id="leavingOleSIte"  class="visually-hidden" href="javascript:void(0);" (click)="leavingOleSite()">Leaving SIte Popup</a>
+<div class="aside extra-padding" *ngIf="rightRailData">
+                            <div class="row">
+                                <div id="common-plan-choice" class="col-xs-12 col-sm-6 col-md-12 no-submitted" style="display: block;" *ngIf="!(router.url == '/welcome' || router.url == '/review')">
+                                    <div class="module module-aside">
+                                        <div class="uhc-container">
+                                            <div id="chosen-enroll-header"class="segment-title" [innerHTML]="rightRailData.plansummaryHeading">
+                                            </div>
+                                            <div class="content">
+                                                <div>
+                                                    <h5 id="ole-plan-name">{{configObj.OLEYear}} {{configObj.OLEPlanName}}</h5>  
+                                                    <ul>
+                                                        <li id="ole-zip"><strong>{{rightRailData.zipLabelplansummary}}</strong> {{configObj.OLEZip}} ({{configObj.OLECountyName}})</li>
+                                                        <li id="ole-premium"><strong>{{rightRailData.premiumLabelplansummary}}</strong> {{configObj.OLEPremium | currency}} a month</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-12">
+                                    <div class="module module-aside">
+                                        <div class="uhc-container">
+                                            <div id="need-help-title" class="segment-title" [innerHTML]="rightRailData.needHelpHeading">
+
+                                            </div>
+                                            <div class="content">
+                                                <div>
+                                                <div class="icon-col">
+                                                    <div id="contact-help" class="label-icon" [innerHTML]="rightRailData.contactImage + rightRailData.contacthelpHeading">
+                                                    </div>
+                                                    <p>{{rightRailData.contactHelp}}
+                                                        <a href="#" id="tty-number" class="tel" dtmid="ole_rightrail" dtmname="OLE:Call Us">{{configObj.tfnForOle}}</a> <span class="nowrap tty-number">(TTY 711)</span></p>
+                                                    <span id="contact-help-time" [innerHTML]="rightRailData.contactHelpTime"></span>
+                                                </div>
+                                                <div class="icon-col">
+                                                    <div id="chat-header" class="label-icon" [innerHTML]="rightRailData.chatImage + rightRailData.chatHeading">
+                                                       
+                                                    </div>
+                                                    <span id="chat-content" [innerHTML]="rightRailData.chatcontent"></span>
+
+                                                      <iframe [src]="'https://www.team-f-aarpmedicareplans.ose-elr-core.optum.com/content/aarpmedicareplans/en/admin/chat.html' | safe" width="200" height="75" scrolling="no"></iframe>
+
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-6 col-md-12">
+                                    <div class="module module-aside">
+                                        <div class="uhc-container">
+                                            <div id="online-enrollment-header" class="segment-title" [innerHTML]="rightRailData.olerightrailHeading">
+
+                                            </div>
+                                            <div class="content">
+                                                <!-- <div> -->
+                                                    <div id="online-enrollment-image" class="label-icon" [innerHTML]="rightRailData.aboutOleImage + rightRailData.olerightrailImageHeading">
+                                                          
+                                                    </div>
+                                                    <span id="online-enrollment-details" [innerHTML]="rightRailData.olerightrailDetails"></span>
+                                                <!-- </div> -->
+
+                                            </div>
+                                            <div id="learn-more-ole" class="content-secondary">
+                                                <a href="javascript:void(0);" class="modal-link" dtmid="" dtmname="" (click)="learnMore()">{{rightRailData.linktext}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
