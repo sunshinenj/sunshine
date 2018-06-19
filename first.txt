@@ -1,0 +1,262 @@
+Ed cell phone: 203-213-1347
+Unix pwd: Tree12345$
+employee id: 001133879
+
+security question:
+In what city were you born?
+Nanchong
+Where did you meet your spouse for the first time?
+ChengDu
+what is your mother's middle name?
+ZheXiu
+
+Password has been reset to Czns8Xz4 on the UNIX MS domain
+
+things need to do:
+NJ Gender Equity Notice.  (in email)
+
+www.unitedhrdirect.com/benefits
+
+CA Agile Central
+
+Password for CA AGile Central: Caroline12345
+
+ticket : im23783839 soft token
+
+866406
+
+good pwd: orq4430O
+
+wiki.optum.com  Confluence uid/pwd: jianhua_chen/orq4430O
+
+RSA token pin :88886666
+
+new employee orientation ticket number: im23809061
+
+wifi:
+3. Under WiFi Networks, choose Other… and use the settings below for each field. The SSID is case-sensitive. Name WLANm01 Security WPA2 Enterprise
+4. Click Other Network to return and continue configuration of the new WiFi network.
+5. User Name MS Domain ID Password MS Domain Password
+
+
+things needs to do:
+myLearning trainning
+HelloOptum : https://learnsource.unitedhealthgroup.com/psp/lpspr1/EMPLOYEE/ELM/s/WEBLIB_UHC_LM.LM_ISCRIPT.FieldFormula.IScript_GoTo_Search?&UHC_CAT=298392
+
+
+correct. Anything M&V related you cannot obtain unless you receive an email stating you  have interim clearance. you can check your profile in secure to see the parameter for "Tricare Eligible". It will indicate "yes" when you have your clearance.
+
+restclient tool to test restful
+
+dbvisulaizer
+
+add notepad++ into Git edit
+$ git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst  -nosession"
+
+
+digital moderlnation convert to AEM framework
+solute project
+12 agaile team
+Osam optimum scale agile : PI (progemer  increment) plan for the 4 sprints
+PI trastional agile ( 5 sprints) : backlog
+
+
+https://rally1.rallydev.com/#/53845967995d/iterationstatus
+puid/pwd: jianhua_chen@optum.com/Caroline12345/Rachel12345/Peter12345
+
+
+git url:
+https://codehub.optum.com/
+jchen118/orq4430O
+
+AEM server uid/pwd: admin/admin
+
+
+download contents from:
+https://authorv2-tmpdev1.ose.optum.com/libs/cq/core/content/welcome.html
+uid/pwd: admin/admin
+
+i believe you can use bene0600/P@ssword1 10:31 AM 
+although you aren't actually in development judging by the url I see 10:32 AM 
+if you would like to login to see the new application use this link 10:33 AM 
+https://uhcmv-dev1.uhc.com/content/tricareTest/en/home.html 
+
+http://localhost:4502/libs/cq/core/content/welcome.html
+
+classic mode: (so can edit)
+http://localhost:4502/cf#/content/tricareTest/en/beneficiary/MyProfile.html?cq_ck=1464895108698
+
+localserver for rest service:
+http://localhost:8080/tricareservices/providersearch/api 
+
+benefit uid/pwd:
+chenjhua/orq4430O
+
+
+SSN NUMBER:
+runqing: 259-93-7461
+Caroline: 667-09-0586
+Rachel: 675-22-2009
+
+
+the angular code is located within AEM UI project. 
+under the following directory structure:
+src
+main
+tricare
+jcr_root
+etc
+clientlibs
+scripts
+components
+functional
+
+
+dbvisulizer :  Oracle thin driver
+port 1521 
+userId: TRICARE_PORTAL 
+pwd:Triwest_360
+ed02dbadm02.uhc.com 8:03 AM 
+give this one as Database server 8:03 AM 
+tmppdv00.uhc.com 8:03 AM 
+as service 
+
+
+smartCard pin number: orq4430O$
+
+Git pwd: Caroline12345/Rachel12345
+
+Enclave:
+http://it500.optum.com/sites/OTSDQDTS/152010/Batch/Forms/AllItems.aspx?RootFolder=%2Fsites%2FOTSDQDTS%2F152010%2FBatch%2FUHCMW%2FTricare%20Enclave
+
+deploy links:
+http://jenkins.optum.com/tmp/
+http://uhcmv-dev1.uhc.com/uhcm/home.html
+
+
+style:
+http://wiki.optum.com/display/EP/UHC-Military+Style
+
+
+When have build issue, do 
+maven clean -> maven install
+
+www.unitedhealthallies.com
+chenjhua/orq4430O
+
+
+Git:
+jchen118/Caroline12345
+
+
+https://uhcmv-test1.uhc.com/uhcm/home.html
+Username = jasondbntest
+password: Pass#4689
+
+
+PSR: Problem Steps Recorder in windows
+When record, need to click the screen, then it will record and print later. 
+
+
+Dev1 server author mode:
+Go to authorv2-tmpdev1.ose.optum.com/* instead of uhcmv-dev1.uhc.com/*
+
+
+
+dev1 login:
+DW_DevEnvMinor1 and P@ssword1  (for minor Nancy, registered)
+DW_DevEnv1  and P@ssword1  (for Stephen, registered beneficiary)
+
+
+UNIX (jchen118) PWD changed: Caroline12345/Rachel12345/orq4430O/Pencil12/Pencil12345$
+
+
+git save pwd:
+git config --global credential.helper wincred
+
+
+yes.. the demo i did was of wireframes only 
+we use a tool called Axure 
+
+United Health job search:
+https://referrals.unitedhealthgroup.com/data/jobs/information%20technology/665959%20applications%20developer%20java%20basking%20ridge%20nj
+https://hrdirect.uhg.com/USA/CED/resources/apply/Pages/default.aspx
+
+
+
+For memory issues Environment Variables: 2:51 PM 
+_JAVA_OPTIONS: -Xms1024M -Xmx2048M -XX:MaxPermSize=256M 
+
+
+HR :
+1-763-957-6301    642 272 961    Judy Fulk
+1-763-957-6301    648 875 895    Karen Radzewicz
+1-763-957-6301    644 398 800    Bryan Hayzler
+1-763-957-6301    643 124 960    Raktim Saha
+
+
+unitedgroup pwd: orq4430O
+
+hsa: www.myuhc.com.   jchen118/orq4430O
+
+jabber: jchen118/orq4430O
+Git pwd: orq4430O
+
+Rally pwd: Chenjhua12345$/orq4430O$/Caroline12345$/Peter12345$/Rachel1$
+
+Atlassian (source tree) pwd: Chenjhua12345$/chenjhua2013@gmail.com
+orq4430O/jianhua_chen@optum.com
+
+optumid: jianhua_chen@optum.com/Caroline12345
+
+
+myuhc.com: http://it500.optum.com/sites/OTSDQDTS/MyUHC/Development/SitePages/Home.aspx
+
+
+pwd msid : 69BmiL6L/orq4430O$
+
+golbal service employee: PTO:
+https://globalselfservice.uhg.com/psp/pshpr01/EMPLOYEE/HRMS/c/UHC_SELF_SERVICE.UHC_EE_TAFW_RPT.GBL?PORTALPARAM_PTCNAV=UHC_EE_TAFW_RPT_GBL&EOPP.SCNode=HRMS&EOPP.SCPortal=EMPLOYEE&EOPP.SCName=ADMN_EMPLOYEE_QUICK_LINKS&EOPP.SCLabel=Employee Quick Links&EOPP.SCPTcname=&FolderPath=PORTAL_ROOT_OBJECT.PORTAL_BASE_DATA.CO_NAVIGATION_COLLECTIONS.ADMN_EMPLOYEE_QUICK_LINKS.ADMN_S201208071356515611759189&IsFolder=false
+
+secure pwd: 
+Wv9NnMh3/Rachel12345$
+orq4430O$
+
+
+agile training links:
+
+https://oneconnect.uhg.com/groups/optum-scalable-agile-method-osam-community-edition-in-technology 
+
+http://it500.optum.com/sites/DFP/EDPLearning/Pages/Agile/AgileCertifications.aspx 
+
+
+Password has been reset to uWmPRsd6 on the DMZMGMT domain (Rachel12345$)
+rhc set up namespace: jianhuachen (for Winscp)
+Putty Key passphrase: jianhuachen
+
+unix (MS) pwd:Caroline12345$
+
+token pin has changed from 88886666 to 22224444
+
+ms domain/unix/jabber pwd: Cjh4430O$/Rachel12345$/Peter12345$ 
+
+smart card pin: Orq4430O$
+
+survey: $600
+https://hub.uhg.com/news/unitedhealth-group/2017-01-05-Rally-for-Health-Earn-up-to-600-Take-First-Step-Complete-Health-Survey/1259
+
+Rally for health $600
+http://benefitsinfo.uhg.com/uhg/rally-overview.html
+
+
+The HSA will not go away even the original owner passed away. It can be passed to the designated beneficiary.  the husband/wife can continue to use it... 
+1:11 PM 
+
+after 65, you can use HSA for any thing if you want, without penalty (just pay the tax). 
+1:13 PM 
+
+if use for medical, dont need to pay tax 
+
+stackoverflow id chenjhua2013@gmail.com/Caroline12345$
+
+Rally
